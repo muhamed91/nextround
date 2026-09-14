@@ -26,6 +26,12 @@ function Tracker() {
     } catch {
       trackEvent("referral_visit", { ref: safe });
     }
+    // Keep the URL clean after recording the referral.
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("ref");
+      window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+    } catch {}
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

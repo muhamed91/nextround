@@ -38,16 +38,28 @@ src/lib/score.ts    Readiness Score (Durchschnitt × 10), Headlines, Insights
 src/components/     Logo, Header, Button, ProgressBar, Doodles (SVG), Shell
 ```
 
-## Analytics-Events
+## Tracking
 
-`page_view`, `profession_selected`, `general_practice_selected`, `company_added`, `company_skipped`,
+Jedes Event geht an alle konfigurierten Kanäle (`src/lib/analytics.ts`):
+
+| Kanal | Aktivierung | Was |
+| --- | --- | --- |
+| First-Party `/api/track` | immer an | Jedes Event als JSON-Zeile `[track]` in den Vercel Runtime Logs. Optional Weiterleitung an `ANALYTICS_WEBHOOK_URL` (Google Sheets Apps Script, Make, n8n, Supabase, …) für dauerhafte Speicherung. |
+| Vercel Analytics | im Vercel-Projekt unter "Analytics" einschalten | Seitenaufrufe, Länder, Geräte. Custom Events auf Pro-Plan. |
+| Plausible | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` setzen | Cookielose Alternative mit Custom Goals. |
+
+Jedes Event enthält anonymen Kontext, damit sich der Funnel rekonstruieren lässt:
+`vid` (zufällige Besucher-ID, localStorage), `sid` (Sitzungs-ID), `interview_id`, `referred_by` (Referral-Code des Einladenden).
+
+Events: `page_view`, `profession_selected`, `general_practice_selected`, `company_added`, `company_skipped`,
 `interview_started`, `question_answered`, `interview_completed`, `interview_restarted`,
-`share_clicked`, `share_completed`, `referral_visit`.
+`share_clicked`, `share_completed`, `pdf_downloaded`, `referral_visit`.
 
-Es werden nie Interview-Antworten oder persönliche Daten an Analytics gesendet.
+Kennzahlen daraus: Start-Rate (`interview_started` / `page_view` auf `/`), Completion-Rate (`interview_completed` / `interview_started`),
+Replay-Rate (`interview_restarted` / `interview_completed`), Share-Rate (`share_completed` / `interview_completed`),
+Referral-Rate (`referral_visit` / `share_completed`).
 
-In Plausible die Events als Custom Goals anlegen, dann lassen sich Start-, Completion-, Replay-, Share- und
-Referral-Rate direkt im Plausible-Dashboard ablesen.
+Es werden nie Interview-Antworten oder persönliche Daten an das Tracking gesendet.
 
 ## AI-Kosten
 

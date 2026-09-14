@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Caveat } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { ReferralTracker } from "@/components/ReferralTracker";
 
 const sans = Plus_Jakarta_Sans({
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </>
         ) : null}
         <ReferralTracker />
+        <Analytics />
         {children}
       </body>
     </html>
