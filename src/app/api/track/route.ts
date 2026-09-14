@@ -1,5 +1,6 @@
 import { ANALYTICS_EVENTS, type AnalyticsEvent } from "@/lib/analytics";
 import { clientKey, rateLimit } from "@/lib/rateLimit";
+import { dayKey, pipeline, storeConfigured } from "@/lib/store";
 
 export const runtime = "nodejs";
 
@@ -53,7 +54,29 @@ export async function POST(req: Request) {
   // 1) Always visible in the Vercel runtime logs (filter for "[track]").
   console.log("[track]", JSON.stringify(record));
 
-  // 2) Optional durable sink: any webhook that accepts JSON (Google Sheets Apps Script, Make, n8n, Supabase edge fn, …).
+  // 2) Built-in stats (Upstash Redis, free tier) → /stats dashboard.
+  if (storeConfigured()) {
+    const day = dayKey();
+    const vid = typeof record.props.vid === "string" ? record.props.vid : "";
+    const cmds: Array<Array<string | number>> = [
+      ["HINCRBY", `stats:events:${day}`, event, 1],
+      ["HINCRBY", "stats:events:total", event, 1],
+      ["EXPIRE", `stats:events:${day}`, 400 * 86_400],
+    ];
+    if (vid) {
+      cmds.push(["PFADD", `stats:visitors:${day}`, vid], ["PFADD", "stats:visitors:total", vid], ["EXPIRE", `stats:visitors:${day}`, 400 * 86_400]);
+    }
+    if (event === "page_view" && record.path) cmds.push(["HINCRBY", `stats:pages:${day}`, record.path, 1], ["EXPIRE", `stats:pages:${day}`, 400 * 86_400]);
+    if (event === "profession_selected" && typeof record.props.profession === "string") {
+      cmds.push(["HINCRBY", "stats:professions", record.props.profession, 1]);
+    }
+    if (event === "referral_visit" && typeof record.props.ref === "string") cmds.push(["HINCRBY", "stats:referrers", record.props.ref, 1]);
+    if (record.country) cmds.push(["HINCRBY", "stats:countries", record.country, 1]);
+    cmds.push(["HINCRBY", "stats:devices", record.device, 1]);
+    await pipeline(cmds);
+  }
+
+  // 3) Optional durable sink: any webhook that accepts JSON (Google Sheets Apps Script, Make, n8n, Supabase edge fn, …).
   const webhook = process.env.ANALYTICS_WEBHOOK_URL;
   if (webhook) {
     try {

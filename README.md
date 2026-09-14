@@ -61,6 +61,17 @@ Referral-Rate (`referral_visit` / `share_completed`).
 
 Es werden nie Interview-Antworten oder persönliche Daten an das Tracking gesendet.
 
+### Eigenes Dashboard unter `/stats`
+
+Kostenlos, ohne externe Analytics: Besucher pro Tag, Funnel, Top-Berufe, Länder, Geräte, Referral-Codes.
+
+1. Vercel → Projekt → Storage → „Upstash Redis“ (Free) erstellen und mit dem Projekt verbinden.
+   Vercel setzt `KV_REST_API_URL` und `KV_REST_API_TOKEN` automatisch.
+2. Env-Variable `STATS_SECRET` setzen (Passwort fürs Dashboard).
+3. Redeploy. Danach `/stats` öffnen und anmelden.
+
+Ohne `STATS_SECRET` ist die Seite deaktiviert (404). Ohne Datenbank zeigt sie eine Anleitung.
+
 ## AI-Kosten
 
 - Fragen: 1 Request pro Interview (JSON, max. 1200 Output-Tokens).
