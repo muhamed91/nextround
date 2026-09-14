@@ -89,10 +89,11 @@ export async function downloadResultPdf(session: Session): Promise<void> {
   y = Math.max(saveY + 34, y + 15 + sub.length * 4.6);
 
   // ---- Insights ----
+  const sm = session.summary;
   const insightRows: Array<[string, string]> = [
-    ["Das sitzt", insights.strong],
-    ["Das solltest du noch üben", insights.practice],
-    ["Deine wichtigste Verbesserung", insights.improvement],
+    ["Das sitzt", sm?.strength ?? insights.strong],
+    ["Das solltest du noch üben", sm?.improvementArea ?? insights.practice],
+    ["Dein wichtigster Tipp", sm?.mostImportantTip ?? insights.improvement],
   ];
   for (const [label, value] of insightRows) {
     ensure(16);
@@ -108,6 +109,11 @@ export async function downloadResultPdf(session: Session): Promise<void> {
     const v = doc.splitTextToSize(plain(value), CW - 10) as string[];
     doc.text(v[0] ?? "", M + 5, y + 10.5);
     y += 17;
+  }
+  if (sm && sm.practiceAgain.length > 0) {
+    y += 2;
+    text("Diese Fragen nochmal üben", 9, MUTED, true, 1.2);
+    for (const q of sm.practiceAgain) text(`• ${q}`, 10.5, INK, false, 1.4);
   }
   y += 6;
 
@@ -148,6 +154,11 @@ export async function downloadResultPdf(session: Session): Promise<void> {
     text("Mach es noch stärker", 8.5, MUTED, true, 1.2);
     text(r.improvement, 10, INK, false, 1.4);
     y += 2;
+    if (r.followUpNeeded && r.followUpQuestion) {
+      text("Mögliche Nachfrage im echten Gespräch", 8.5, MUTED, true, 1.2);
+      text(r.followUpQuestion, 10, INK, false, 1.4);
+      y += 2;
+    }
     if (r.betterAnswer) {
       text("So könnte es klingen", 8.5, PURPLE, true, 1.2);
       text(`"${r.betterAnswer}"`, 10, INK, false, 1.4);

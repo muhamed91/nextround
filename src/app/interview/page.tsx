@@ -183,6 +183,13 @@ export default function InterviewPage() {
           <div className="animate-fade-up mt-6 space-y-4">
             <FeedbackRow icon="✓" tone="ok" title="Das war gut" text={feedback.positive} />
             <FeedbackRow icon="→" tone="warn" title="Mach es noch stärker" text={feedback.improvement} />
+            {feedback.followUpNeeded && feedback.followUpQuestion ? (
+              <div className="rounded-3xl border-2 border-dashed border-purple/40 bg-white p-5">
+                <p className="text-sm font-bold text-purple">Ein echter Interviewer würde jetzt nachfragen:</p>
+                <p className="mt-2 text-base font-semibold leading-relaxed text-ink">„{feedback.followUpQuestion}“</p>
+                <p className="mt-2 text-sm text-muted">Überleg dir kurz, was du darauf antworten würdest.</p>
+              </div>
+            ) : null}
             {feedback.betterAnswer ? (
               <div className="rounded-3xl bg-lilac p-5">
                 <p className="flex items-center gap-2 text-sm font-bold text-purple">

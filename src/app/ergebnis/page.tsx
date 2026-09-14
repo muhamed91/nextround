@@ -11,7 +11,7 @@ import { loadSession, newInterviewId, saveSession } from "@/lib/session";
 import { buildInsights, readinessScore, scoreHeadline, scoreSubline } from "@/lib/score";
 import { copyShareLink, shareNextRound, whatsappShareUrl } from "@/lib/share";
 import { downloadResultPdf } from "@/lib/pdf";
-import { QUESTION_COUNT, type Session } from "@/lib/types";
+import { QUESTION_COUNT, type Session, type Summary } from "@/lib/types";
 
 export default function ErgebnisPage() {
   const router = useRouter();
@@ -36,6 +36,32 @@ export default function ErgebnisPage() {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- hydrate from sessionStorage after mount
     setSession(s);
     setCanNativeShare(typeof navigator !== "undefined" && !!navigator.share);
+
+    // AI wrap-up: fetched once per interview, cached in the session for reloads and the PDF.
+    if (!s.summary && s.results.length >= QUESTION_COUNT) {
+      const items = s.questions.slice(0, s.results.length).map((q, i) => ({
+        question: q.question,
+        category: q.category ?? "general",
+        score: s.results[i].score,
+        answer: s.results[i].answer ?? "",
+        improvement: s.results[i].improvement,
+      }));
+      fetch("/api/summary", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ profession: s.profession, company: s.company, items }),
+      })
+        .then((r) => (r.ok ? (r.json() as Promise<Summary>) : null))
+        .then((summary) => {
+          if (!summary || typeof summary.strength !== "string") return;
+          const current = loadSession();
+          if (!current || current.interviewId !== s.interviewId) return;
+          const next = { ...current, summary };
+          saveSession(next);
+          setSession(next);
+        })
+        .catch(() => {});
+    }
   }, [router]);
 
   useEffect(() => {
@@ -48,6 +74,7 @@ export default function ErgebnisPage() {
 
   const score = readinessScore(session.results);
   const insights = buildInsights(session.questions, session.results);
+  const summary = session.summary;
 
   function restart() {
     if (!session) return;
@@ -111,9 +138,22 @@ export default function ErgebnisPage() {
           </section>
 
           <section className="animate-fade-up mt-8 space-y-3 lg:mt-6">
-            <Insight tone="ok" icon="✓" title="Das sitzt" text={insights.strong} />
-            <Insight tone="warn" icon="→" title="Das solltest du noch üben" text={insights.practice} />
-            <Insight tone="purple" icon="★" title="Deine wichtigste Verbesserung" text={insights.improvement} />
+            <Insight tone="ok" icon="✓" title="Das sitzt" text={summary?.strength ?? insights.strong} />
+            <Insight tone="warn" icon="→" title="Das solltest du noch üben" text={summary?.improvementArea ?? insights.practice} />
+            <Insight tone="purple" icon="★" title="Dein wichtigster Tipp" text={summary?.mostImportantTip ?? insights.improvement} />
+            {summary && summary.practiceAgain.length > 0 ? (
+              <div className="rounded-3xl border border-line bg-white p-5">
+                <p className="text-sm font-bold">Diese Fragen nochmal üben</p>
+                <ul className="mt-2 space-y-2">
+                  {summary.practiceAgain.map((q) => (
+                    <li key={q} className="flex gap-2 text-base leading-relaxed text-ink">
+                      <span aria-hidden="true" className="text-purple">•</span>
+                      <span>{q}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
           </section>
         </div>
 
