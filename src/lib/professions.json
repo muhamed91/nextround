@@ -1,0 +1,1840 @@
+{
+  "meta": {
+    "project": "NextRound",
+    "language": "de-CH",
+    "generated": "2026-09-14",
+    "source": "berufsberatung.ch Berufs-Check / SDBB",
+    "source_url": "https://www.berufsberatung.ch/de/berufs-check",
+    "note": "V0-Startdatensatz aus der aktuell öffentlich sichtbaren Berufs-Check-Liste. Für eine rechtlich/administrativ vollständige Source-of-Truth-Liste regelmässig gegen das SBFI Berufsverzeichnis abgleichen.",
+    "count": 167
+  },
+  "professions": [
+    {
+      "id": "agrarpraktiker-in-eba",
+      "name": "Agrarpraktiker/in EBA",
+      "degree": "EBA",
+      "aliases": [],
+      "keywords": [
+        "agrarpraktiker/in",
+        "eba"
+      ]
+    },
+    {
+      "id": "anlagen-und-apparatebauer-in-efz",
+      "name": "Anlagen- und Apparatebauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "anlagen- und apparatebauer/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "architekturmodellbauer-in-efz",
+      "name": "Architekturmodellbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "architekturmodellbauer/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "augenoptiker-in-efz",
+      "name": "Augenoptiker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "augenoptiker/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "automatiker-in-efz",
+      "name": "Automatiker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "automatiker/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "automatikmonteur-in-efz",
+      "name": "Automatikmonteur/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "automatikmonteur/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "automobil-fachmann-frau-efz",
+      "name": "Automobil-Fachmann/-frau EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "auto",
+        "garage",
+        "automobil"
+      ],
+      "keywords": [
+        "auto",
+        "automobil",
+        "automobil-fachmann/-frau",
+        "efz",
+        "garage"
+      ]
+    },
+    {
+      "id": "automobil-mechatroniker-in-efz",
+      "name": "Automobil-Mechatroniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "auto",
+        "automechaniker",
+        "mechatronik",
+        "garage"
+      ],
+      "keywords": [
+        "auto",
+        "automechaniker",
+        "automobil-mechatroniker/in",
+        "efz",
+        "garage",
+        "mechatronik"
+      ]
+    },
+    {
+      "id": "baecker-in-konditor-in-confiseur-in-efz",
+      "name": "Bäcker/in-Konditor/in-Confiseur/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "bäcker/in-konditor/in-confiseur/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "baumaschinenmechaniker-in-efz",
+      "name": "Baumaschinenmechaniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "baumaschinenmechaniker/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "bauwerktrenner-in-efz",
+      "name": "Bauwerktrenner/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "bauwerktrenner/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "bekleidungsgestalter-in-efz",
+      "name": "Bekleidungsgestalter/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "bekleidungsgestalter/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "betonwerker-in-efz",
+      "name": "Betonwerker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "betonwerker/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "bindetechnologe-login-efz",
+      "name": "Bindetechnologe/-login EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "bindetechnologe/-login",
+        "efz"
+      ]
+    },
+    {
+      "id": "boden-parkettleger-in-efz",
+      "name": "Boden-Parkettleger/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "boden-parkettleger/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "bootbauer-in-efz",
+      "name": "Bootbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "bootbauer/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "bootfachwart-in-efz",
+      "name": "Bootfachwart/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "bootfachwart/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "buchhaendler-in-efz",
+      "name": "Buchhändler/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "buchhändler/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "buechsenmacher-in-efz",
+      "name": "Büchsenmacher/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "büchsenmacher/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "buehnentaenzer-in-efz",
+      "name": "Bühnentänzer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "bühnentänzer/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "carrosserielackierer-in-efz",
+      "name": "Carrosserielackierer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "carrosserielackierer/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "carrosseriespengler-in-efz",
+      "name": "Carrosseriespengler/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "carrosseriespengler/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "chemie-und-pharmatechnologe-login-efz",
+      "name": "Chemie- und Pharmatechnologe/-login EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "chemie- und pharmatechnologe/-login",
+        "efz"
+      ]
+    },
+    {
+      "id": "coiffeuse-coiffeur-efz",
+      "name": "Coiffeuse/Coiffeur EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "coiffeuse/coiffeur",
+        "efz"
+      ]
+    },
+    {
+      "id": "dentalassistent-in-efz",
+      "name": "Dentalassistent/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "dentalassistent/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "detailhandelsassistent-in-eba",
+      "name": "Detailhandelsassistent/in EBA",
+      "degree": "EBA",
+      "aliases": [],
+      "keywords": [
+        "detailhandelsassistent/in",
+        "eba"
+      ]
+    },
+    {
+      "id": "detailhandelsfachmann-frau-efz-consumer-electronics",
+      "name": "Detailhandelsfachmann/-frau EFZ Consumer-Electronics",
+      "degree": "EFZ",
+      "aliases": [
+        "detailhandel",
+        "verkauf",
+        "elektronik",
+        "consumer electronics"
+      ],
+      "keywords": [
+        "consumer electronics",
+        "detailhandel",
+        "detailhandelsfachmann/-frau",
+        "efz",
+        "elektronik",
+        "verkauf"
+      ]
+    },
+    {
+      "id": "detailhandelsfachmann-frau-efz-lebensmittel",
+      "name": "Detailhandelsfachmann/-frau EFZ Lebensmittel",
+      "degree": "EFZ",
+      "aliases": [
+        "detailhandel",
+        "verkauf",
+        "lebensmittel"
+      ],
+      "keywords": [
+        "detailhandel",
+        "detailhandelsfachmann/-frau",
+        "efz",
+        "lebensmittel",
+        "verkauf"
+      ]
+    },
+    {
+      "id": "detailhandelsfachmann-frau-efz-textil",
+      "name": "Detailhandelsfachmann/-frau EFZ Textil",
+      "degree": "EFZ",
+      "aliases": [
+        "detailhandel",
+        "verkauf",
+        "mode",
+        "textil"
+      ],
+      "keywords": [
+        "detailhandel",
+        "detailhandelsfachmann/-frau",
+        "efz",
+        "mode",
+        "textil",
+        "verkauf"
+      ]
+    },
+    {
+      "id": "drogist-in-efz",
+      "name": "Drogist/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "drogist/in",
+        "efz"
+      ]
+    },
+    {
+      "id": "elektroinstalleur-in-efz",
+      "name": "Elektroinstalleur/in EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "elektriker",
+        "elektro",
+        "strom"
+      ],
+      "keywords": [
+        "efz",
+        "elektriker",
+        "elektro",
+        "elektroinstalleur/in",
+        "strom"
+      ]
+    },
+    {
+      "id": "elektroniker-in-efz",
+      "name": "Elektroniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "elektroniker/in"
+      ]
+    },
+    {
+      "id": "elektroplaner-in-efz",
+      "name": "Elektroplaner/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "elektroplaner/in"
+      ]
+    },
+    {
+      "id": "fachfrau-fachmann-betreuung-efz",
+      "name": "Fachfrau/Fachmann Betreuung EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "fabe",
+        "betreuung",
+        "soziales"
+      ],
+      "keywords": [
+        "betreuung",
+        "efz",
+        "fabe",
+        "fachfrau/fachmann betreuung",
+        "soziales"
+      ]
+    },
+    {
+      "id": "fachmann-frau-betriebsunterhalt-efz",
+      "name": "Fachmann-/Frau Betriebsunterhalt EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fachmann-/frau betriebsunterhalt"
+      ]
+    },
+    {
+      "id": "fachmann-frau-apotheke-efz",
+      "name": "Fachmann/-frau Apotheke EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fachmann/-frau apotheke"
+      ]
+    },
+    {
+      "id": "fachmann-frau-bewegungs-und-gesundheitsfoerderung-efz",
+      "name": "Fachmann/-frau Bewegungs- und Gesundheitsförderung EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fachmann/-frau bewegungs- und gesundheitsförderung"
+      ]
+    },
+    {
+      "id": "fachmann-frau-gesundheit-efz",
+      "name": "Fachmann/-frau Gesundheit EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "fage",
+        "gesundheit",
+        "pflege"
+      ],
+      "keywords": [
+        "efz",
+        "fachmann/-frau gesundheit",
+        "fage",
+        "gesundheit",
+        "pflege"
+      ]
+    },
+    {
+      "id": "fachmann-frau-information-und-dokumentation-efz",
+      "name": "Fachmann/-frau Information und Dokumentation EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fachmann/-frau information und dokumentation"
+      ]
+    },
+    {
+      "id": "fachmann-frau-leder-und-textil-efz",
+      "name": "Fachmann/-frau Leder und Textil EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fachmann/-frau leder und textil"
+      ]
+    },
+    {
+      "id": "fachmann-frau-reinigungstechnik-efz",
+      "name": "Fachmann/-frau Reinigungstechnik EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fachmann/-frau reinigungstechnik"
+      ]
+    },
+    {
+      "id": "fachmann-frau-textilpflege-efz",
+      "name": "Fachmann/-frau Textilpflege EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fachmann/-frau textilpflege"
+      ]
+    },
+    {
+      "id": "fahrradmechaniker-in-efz",
+      "name": "Fahrradmechaniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fahrradmechaniker/in"
+      ]
+    },
+    {
+      "id": "fahrzeugschlosser-in-efz",
+      "name": "Fahrzeugschlosser/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fahrzeugschlosser/in"
+      ]
+    },
+    {
+      "id": "feinwerkoptiker-in-efz",
+      "name": "Feinwerkoptiker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "feinwerkoptiker/in"
+      ]
+    },
+    {
+      "id": "fleischfachmann-frau-efz",
+      "name": "Fleischfachmann/-frau EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fleischfachmann/-frau"
+      ]
+    },
+    {
+      "id": "florist-in-efz",
+      "name": "Florist/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "florist/in"
+      ]
+    },
+    {
+      "id": "formenbauer-in-efz",
+      "name": "Formenbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "formenbauer/in"
+      ]
+    },
+    {
+      "id": "forstwart-in-efz",
+      "name": "Forstwart/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "forstwart/in"
+      ]
+    },
+    {
+      "id": "fotograf-in-efz",
+      "name": "Fotograf/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fotograf/in"
+      ]
+    },
+    {
+      "id": "fotomedienfachmann-frau-efz",
+      "name": "Fotomedienfachmann/-frau EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "fotomedienfachmann/-frau"
+      ]
+    },
+    {
+      "id": "gaertner-in-efz",
+      "name": "Gärtner/in EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "gärtner",
+        "garten",
+        "pflanzen"
+      ],
+      "keywords": [
+        "efz",
+        "garten",
+        "gärtner",
+        "gärtner/in",
+        "pflanzen"
+      ]
+    },
+    {
+      "id": "gebaeudeinformatiker-in-efz",
+      "name": "Gebäudeinformatiker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "gebäudeinformatiker/in"
+      ]
+    },
+    {
+      "id": "gebaeudetechnikplaner-in-sanitaer-efz",
+      "name": "Gebäudetechnikplaner/in (Sanitär) EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "gebäudetechnikplaner/in (sanitär)"
+      ]
+    },
+    {
+      "id": "gebaeudetechnikplaner-in-heizung-efz",
+      "name": "Gebäudetechnikplaner/in Heizung EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "gebäudetechnikplaner/in heizung"
+      ]
+    },
+    {
+      "id": "gebaeudetechnikplaner-in-lueftung-efz",
+      "name": "Gebäudetechnikplaner/in Lüftung EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "gebäudetechnikplaner/in lüftung"
+      ]
+    },
+    {
+      "id": "geigenbauer-in-efz",
+      "name": "Geigenbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "geigenbauer/in"
+      ]
+    },
+    {
+      "id": "gemuesegaertner-in-efz",
+      "name": "Gemüsegärtner/-in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "gemüsegärtner/-in"
+      ]
+    },
+    {
+      "id": "geomatiker-in-efz",
+      "name": "Geomatiker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "geomatiker/in"
+      ]
+    },
+    {
+      "id": "gestalter-in-werbetechnik-efz",
+      "name": "Gestalter/in Werbetechnik EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "gestalter/in werbetechnik"
+      ]
+    },
+    {
+      "id": "gewebegestalter-in-efz",
+      "name": "Gewebegestalter/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "gewebegestalter/in"
+      ]
+    },
+    {
+      "id": "gipser-in-trockenbauer-in-efz",
+      "name": "Gipser/in-Trockenbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "gipser/in-trockenbauer/in"
+      ]
+    },
+    {
+      "id": "glaser-in-efz",
+      "name": "Glaser/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "glaser/in"
+      ]
+    },
+    {
+      "id": "glasmaler-in-efz",
+      "name": "Glasmaler/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "glasmaler/in"
+      ]
+    },
+    {
+      "id": "gleisbauer-in-efz",
+      "name": "Gleisbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "gleisbauer/in"
+      ]
+    },
+    {
+      "id": "goldschmied-in-efz",
+      "name": "Goldschmied/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "goldschmied/in"
+      ]
+    },
+    {
+      "id": "grafiker-in-efz",
+      "name": "Grafiker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "grafiker/in"
+      ]
+    },
+    {
+      "id": "graveur-in-efz",
+      "name": "Graveur/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "graveur/in"
+      ]
+    },
+    {
+      "id": "grundbauer-in-efz",
+      "name": "Grundbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "grundbauer/in"
+      ]
+    },
+    {
+      "id": "gusstechnologe-login-efz",
+      "name": "Gusstechnologe/-login EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "gusstechnologe/-login"
+      ]
+    },
+    {
+      "id": "heizungsinstallateur-in-efz",
+      "name": "Heizungsinstallateur/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "heizungsinstallateur/in"
+      ]
+    },
+    {
+      "id": "holzbildhauer-in-efz",
+      "name": "Holzbildhauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "holzbildhauer/in"
+      ]
+    },
+    {
+      "id": "holzhandwerker-in-efz",
+      "name": "Holzhandwerker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "holzhandwerker/in"
+      ]
+    },
+    {
+      "id": "holzindustriefachmann-frau-efz",
+      "name": "Holzindustriefachmann/-frau EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "holzindustriefachmann/-frau"
+      ]
+    },
+    {
+      "id": "hufschmied-in-efz",
+      "name": "Hufschmied/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "hufschmied/in"
+      ]
+    },
+    {
+      "id": "industrie-und-unterlagsbodenbauer-in-efz",
+      "name": "Industrie- und Unterlagsbodenbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "industrie- und unterlagsbodenbauer/in"
+      ]
+    },
+    {
+      "id": "industriekeramiker-in-efz",
+      "name": "Industriekeramiker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "industriekeramiker/in"
+      ]
+    },
+    {
+      "id": "industrielackierer-in-efz",
+      "name": "Industrielackierer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "industrielackierer/in"
+      ]
+    },
+    {
+      "id": "industriepolsterer-in-efz",
+      "name": "Industriepolsterer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "industriepolsterer/in"
+      ]
+    },
+    {
+      "id": "informatiker-in-efz",
+      "name": "Informatiker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "informatik",
+        "informatiker",
+        "it",
+        "computer",
+        "software",
+        "coding"
+      ],
+      "keywords": [
+        "coding",
+        "computer",
+        "efz",
+        "informatik",
+        "informatiker",
+        "informatiker/in",
+        "it",
+        "software"
+      ]
+    },
+    {
+      "id": "isolierspengler-in-efz",
+      "name": "Isolierspengler/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "isolierspengler/in"
+      ]
+    },
+    {
+      "id": "kaeltesystem-monteur-in-efz",
+      "name": "Kältesystem-Monteur/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "kältesystem-monteur/in"
+      ]
+    },
+    {
+      "id": "kaeltesystem-planer-in-efz",
+      "name": "Kältesystem-Planer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "kältesystem-planer/in"
+      ]
+    },
+    {
+      "id": "kaminfeger-in-efz",
+      "name": "Kaminfeger/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "kaminfeger/in"
+      ]
+    },
+    {
+      "id": "kaufmann-frau-bank-efz",
+      "name": "Kaufmann/-frau Bank EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "bank",
+        "banklehre",
+        "kv bank"
+      ],
+      "keywords": [
+        "bank",
+        "banklehre",
+        "efz",
+        "kaufmann/-frau bank",
+        "kv bank"
+      ]
+    },
+    {
+      "id": "kaufmann-frau-eba",
+      "name": "Kaufmann/-frau EBA",
+      "degree": "EBA",
+      "aliases": [],
+      "keywords": [
+        "eba",
+        "kaufmann/-frau"
+      ]
+    },
+    {
+      "id": "kaufmann-frau-efz",
+      "name": "Kaufmann/-frau EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "kv",
+        "kaufmann",
+        "kauffrau",
+        "büro",
+        "office"
+      ],
+      "keywords": [
+        "büro",
+        "efz",
+        "kauffrau",
+        "kaufmann",
+        "kaufmann/-frau",
+        "kv",
+        "office"
+      ]
+    },
+    {
+      "id": "kaufmann-frau-oeffentliche-verwaltung-efz",
+      "name": "Kaufmann/-frau Öffentliche Verwaltung EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "kaufmann/-frau öffentliche verwaltung"
+      ]
+    },
+    {
+      "id": "kaufmann-frau-reisen-efz",
+      "name": "Kaufmann/-frau Reisen EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "kaufmann/-frau reisen"
+      ]
+    },
+    {
+      "id": "kaufmann-frau-treuhand-immobilien-efz",
+      "name": "Kaufmann/-frau Treuhand/Immobilien EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "kaufmann/-frau treuhand/immobilien"
+      ]
+    },
+    {
+      "id": "koch-koechin-efz",
+      "name": "Koch/Köchin EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "koch",
+        "köchin",
+        "küche",
+        "gastronomie"
+      ],
+      "keywords": [
+        "efz",
+        "gastronomie",
+        "koch",
+        "koch/köchin",
+        "köchin",
+        "küche"
+      ]
+    },
+    {
+      "id": "konstrukteur-in-efz",
+      "name": "Konstrukteur/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "konstrukteur/in"
+      ]
+    },
+    {
+      "id": "kosmetiker-in-efz",
+      "name": "Kosmetiker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "kosmetiker/in"
+      ]
+    },
+    {
+      "id": "kuechenangestellte-r-eba",
+      "name": "Küchenangestellte/r EBA",
+      "degree": "EBA",
+      "aliases": [],
+      "keywords": [
+        "eba",
+        "küchenangestellte/r"
+      ]
+    },
+    {
+      "id": "kunststofftechnologe-technologin-efz",
+      "name": "Kunststofftechnologe/-technologin EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "kunststofftechnologe/-technologin"
+      ]
+    },
+    {
+      "id": "laborant-in-chemie-efz",
+      "name": "Laborant/in Chemie EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "laborant/in chemie"
+      ]
+    },
+    {
+      "id": "landmaschinenmechaniker-in-efz",
+      "name": "Landmaschinenmechaniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "landmaschinenmechaniker/in"
+      ]
+    },
+    {
+      "id": "landwirt-in-efz",
+      "name": "Landwirt/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "landwirt/in"
+      ]
+    },
+    {
+      "id": "lebensmitteltechnologe-login-efz",
+      "name": "Lebensmitteltechnologe/-login EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "lebensmitteltechnologe/-login"
+      ]
+    },
+    {
+      "id": "logistiker-in-eba",
+      "name": "Logistiker/in EBA",
+      "degree": "EBA",
+      "aliases": [],
+      "keywords": [
+        "eba",
+        "logistiker/in"
+      ]
+    },
+    {
+      "id": "logistiker-in-efz",
+      "name": "Logistiker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "logistik",
+        "lager",
+        "transport"
+      ],
+      "keywords": [
+        "efz",
+        "lager",
+        "logistik",
+        "logistiker/in",
+        "transport"
+      ]
+    },
+    {
+      "id": "lueftungsanlagenbauer-in-efz",
+      "name": "Lüftungsanlagenbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "lüftungsanlagenbauer/in"
+      ]
+    },
+    {
+      "id": "maler-in-efz",
+      "name": "Maler/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "maler/in"
+      ]
+    },
+    {
+      "id": "maurer-in-efz",
+      "name": "Maurer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "maurer/in"
+      ]
+    },
+    {
+      "id": "mediamatiker-in-efz",
+      "name": "Mediamatiker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "mediamatik",
+        "medien",
+        "design",
+        "marketing",
+        "it"
+      ],
+      "keywords": [
+        "design",
+        "efz",
+        "it",
+        "marketing",
+        "mediamatik",
+        "mediamatiker/in",
+        "medien"
+      ]
+    },
+    {
+      "id": "medientechnologe-login-efz",
+      "name": "Medientechnologe/-login EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "medientechnologe/-login"
+      ]
+    },
+    {
+      "id": "medizinische-r-praxisassistent-in-efz",
+      "name": "Medizinische/r Praxisassistent/in EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "mpa",
+        "arztpraxis",
+        "medizin"
+      ],
+      "keywords": [
+        "arztpraxis",
+        "efz",
+        "medizin",
+        "medizinische/r praxisassistent/in",
+        "mpa"
+      ]
+    },
+    {
+      "id": "metallbauer-in-efz",
+      "name": "Metallbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "metallbauer/in"
+      ]
+    },
+    {
+      "id": "metallbaukonstrukteur-in-efz",
+      "name": "Metallbaukonstrukteur/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "metallbaukonstrukteur/in"
+      ]
+    },
+    {
+      "id": "metallbaupraktiker-in-eba",
+      "name": "Metallbaupraktiker/in EBA",
+      "degree": "EBA",
+      "aliases": [],
+      "keywords": [
+        "eba",
+        "metallbaupraktiker/in"
+      ]
+    },
+    {
+      "id": "mikromechaniker-in-efz",
+      "name": "Mikromechaniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "mikromechaniker/in"
+      ]
+    },
+    {
+      "id": "mikrozeichner-in-efz",
+      "name": "Mikrozeichner/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "mikrozeichner/in"
+      ]
+    },
+    {
+      "id": "milchtechnologe-login-efz",
+      "name": "Milchtechnologe/-login EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "milchtechnologe/-login"
+      ]
+    },
+    {
+      "id": "montage-elektriker-in-efz",
+      "name": "Montage-Elektriker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "montage-elektriker/in"
+      ]
+    },
+    {
+      "id": "motorgeraetemechaniker-in-efz",
+      "name": "Motorgerätemechaniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "motorgerätemechaniker/in"
+      ]
+    },
+    {
+      "id": "motorradmechaniker-in-efz",
+      "name": "Motorradmechaniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "motorradmechaniker/in"
+      ]
+    },
+    {
+      "id": "multimediaelektroniker-in-efz",
+      "name": "Multimediaelektroniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "multimediaelektroniker/in"
+      ]
+    },
+    {
+      "id": "nautische-r-fachmann-frau-efz",
+      "name": "Nautische/r Fachmann/-frau EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "nautische/r fachmann/-frau"
+      ]
+    },
+    {
+      "id": "netzelektriker-in-efz",
+      "name": "Netzelektriker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "netzelektriker/in"
+      ]
+    },
+    {
+      "id": "oberflaechenbeschichter-in-efz",
+      "name": "Oberflächenbeschichter/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "oberflächenbeschichter/in"
+      ]
+    },
+    {
+      "id": "oberflaechenveredler-in-uhren-und-schmuck-efz",
+      "name": "Oberflächenveredler/in Uhren und Schmuck EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "oberflächenveredler/in uhren und schmuck"
+      ]
+    },
+    {
+      "id": "obstfachmann-frau-efz",
+      "name": "Obstfachmann/-frau EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "obstfachmann/-frau"
+      ]
+    },
+    {
+      "id": "ofenbauer-in-efz",
+      "name": "Ofenbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "ofenbauer/in"
+      ]
+    },
+    {
+      "id": "orthopaedieschuhmacher-in-efz",
+      "name": "Orthopädieschuhmacher/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "orthopädieschuhmacher/in"
+      ]
+    },
+    {
+      "id": "papiertechnologe-login-efz",
+      "name": "Papiertechnologe/-login EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "papiertechnologe/-login"
+      ]
+    },
+    {
+      "id": "pferdefachmann-fachfrau-efz",
+      "name": "Pferdefachmann/-fachfrau EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "pferdefachmann/-fachfrau"
+      ]
+    },
+    {
+      "id": "pflaesterer-pflaesterin-efz",
+      "name": "Pflästerer/Pflästerin EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "pflästerer/pflästerin"
+      ]
+    },
+    {
+      "id": "physiklaborant-in-efz",
+      "name": "Physiklaborant/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "physiklaborant/in"
+      ]
+    },
+    {
+      "id": "plattenleger-in-efz",
+      "name": "Plattenleger/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "plattenleger/in"
+      ]
+    },
+    {
+      "id": "podologe-podologin-efz",
+      "name": "Podologe/Podologin EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "podologe/podologin"
+      ]
+    },
+    {
+      "id": "polydesigner-in-3d-efz",
+      "name": "Polydesigner/in 3D EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "polydesigner/in 3d"
+      ]
+    },
+    {
+      "id": "polygraf-in-efz",
+      "name": "Polygraf/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "polygraf/in"
+      ]
+    },
+    {
+      "id": "polymechaniker-in-efz",
+      "name": "Polymechaniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "polymechaniker",
+        "mechanik",
+        "maschinen"
+      ],
+      "keywords": [
+        "efz",
+        "maschinen",
+        "mechanik",
+        "polymechaniker",
+        "polymechaniker/in"
+      ]
+    },
+    {
+      "id": "produktionsmechaniker-in-efz",
+      "name": "Produktionsmechaniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "produktionsmechaniker/in"
+      ]
+    },
+    {
+      "id": "raumausstatter-in-efz",
+      "name": "Raumausstatter/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "raumausstatter/in"
+      ]
+    },
+    {
+      "id": "recyclist-in-efz",
+      "name": "Recyclist/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "recyclist/in"
+      ]
+    },
+    {
+      "id": "reifenpraktiker-in-eba",
+      "name": "Reifenpraktiker/in EBA",
+      "degree": "EBA",
+      "aliases": [],
+      "keywords": [
+        "eba",
+        "reifenpraktiker/in"
+      ]
+    },
+    {
+      "id": "restaurantangestellte-r-eba",
+      "name": "Restaurantangestellte/r EBA",
+      "degree": "EBA",
+      "aliases": [],
+      "keywords": [
+        "eba",
+        "restaurantangestellte/r"
+      ]
+    },
+    {
+      "id": "restaurantfachmann-frau-efz",
+      "name": "Restaurantfachmann/-frau EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "restaurantfachmann/-frau"
+      ]
+    },
+    {
+      "id": "sanitaerinstallateur-in-efz",
+      "name": "Sanitärinstallateur/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "sanitärinstallateur/in"
+      ]
+    },
+    {
+      "id": "schreiner-in-wagner-efz",
+      "name": "Schreiner/in (Wagner) EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "schreiner/in (wagner)"
+      ]
+    },
+    {
+      "id": "schreiner-in-efz",
+      "name": "Schreiner/in EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "schreiner",
+        "holz",
+        "möbel"
+      ],
+      "keywords": [
+        "efz",
+        "holz",
+        "möbel",
+        "schreiner",
+        "schreiner/in"
+      ]
+    },
+    {
+      "id": "schreinerpraktiker-in-eba",
+      "name": "Schreinerpraktiker/in EBA",
+      "degree": "EBA",
+      "aliases": [],
+      "keywords": [
+        "eba",
+        "schreinerpraktiker/in"
+      ]
+    },
+    {
+      "id": "schuhmacher-in-efz",
+      "name": "Schuhmacher/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "schuhmacher/in"
+      ]
+    },
+    {
+      "id": "seilbahn-mechatroniker-in-efz",
+      "name": "Seilbahn-Mechatroniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "seilbahn-mechatroniker/in"
+      ]
+    },
+    {
+      "id": "spengler-in-efz",
+      "name": "Spengler/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "spengler/in"
+      ]
+    },
+    {
+      "id": "steinmetz-in-efz",
+      "name": "Steinmetz/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "steinmetz/in"
+      ]
+    },
+    {
+      "id": "strassenbauer-in-efz",
+      "name": "Strassenbauer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "strassenbauer/in"
+      ]
+    },
+    {
+      "id": "strassentransportfachmann-frau-efz",
+      "name": "Strassentransportfachmann/-frau EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "strassentransportfachmann/-frau"
+      ]
+    },
+    {
+      "id": "textiltechnologe-technologin-efz-fachrichtung-design",
+      "name": "Textiltechnologe/-technologin EFZ (Fachrichtung Design)",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "textiltechnologe/-technologin"
+      ]
+    },
+    {
+      "id": "textiltechnologe-technologin-efz-fachrichtung-seil-und-hebetechnik",
+      "name": "Textiltechnologe/-technologin EFZ (Fachrichtung Seil- und Hebetechnik)",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "textiltechnologe/-technologin"
+      ]
+    },
+    {
+      "id": "textiltechnologe-technologin-efz-fachrichtung-verarbeitung",
+      "name": "Textiltechnologe/-technologin EFZ (Fachrichtung Verarbeitung)",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "textiltechnologe/-technologin"
+      ]
+    },
+    {
+      "id": "textiltechnologe-technologin-efz-fachrichtung-veredlung",
+      "name": "Textiltechnologe/-technologin EFZ (Fachrichtung Veredlung)",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "textiltechnologe/-technologin"
+      ]
+    },
+    {
+      "id": "theatermaler-in-efz",
+      "name": "Theatermaler/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "theatermaler/in"
+      ]
+    },
+    {
+      "id": "tiermedizinische-r-praxisassistent-in-efz",
+      "name": "Tiermedizinische/r Praxisassistent/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "tiermedizinische/r praxisassistent/in"
+      ]
+    },
+    {
+      "id": "tierpfleger-in-efz",
+      "name": "Tierpfleger/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "tierpfleger/in"
+      ]
+    },
+    {
+      "id": "uhrmacher-in-efz-fachgebiet-rhabillage",
+      "name": "Uhrmacher/in EFZ Fachgebiet Rhabillage",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "uhrmacher/in"
+      ]
+    },
+    {
+      "id": "uhrmacher-in-produktion-efz",
+      "name": "Uhrmacher/in Produktion EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "uhrmacher/in produktion"
+      ]
+    },
+    {
+      "id": "veranstaltungsfachmann-frau-efz",
+      "name": "Veranstaltungsfachmann/-frau EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "veranstaltungsfachmann/-frau"
+      ]
+    },
+    {
+      "id": "vergolder-in-einrahmer-in-efz",
+      "name": "Vergolder/in-Einrahmer/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "vergolder/in-einrahmer/in"
+      ]
+    },
+    {
+      "id": "verpackungsdrucker-in-efz",
+      "name": "Verpackungsdrucker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "verpackungsdrucker/in"
+      ]
+    },
+    {
+      "id": "verpackungstechnologe-login-efz",
+      "name": "Verpackungstechnologe/-login EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "verpackungstechnologe/-login"
+      ]
+    },
+    {
+      "id": "weinfachmann-frau-efz",
+      "name": "Weinfachmann/-frau EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "weinfachmann/-frau"
+      ]
+    },
+    {
+      "id": "wohntextilgestalter-in-efz",
+      "name": "Wohntextilgestalter/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "wohntextilgestalter/in"
+      ]
+    },
+    {
+      "id": "zahntechniker-in-efz",
+      "name": "Zahntechniker/in EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "zahntechniker/in"
+      ]
+    },
+    {
+      "id": "zeichner-in-efz",
+      "name": "Zeichner/in EFZ",
+      "degree": "EFZ",
+      "aliases": [
+        "zeichner",
+        "cad",
+        "architektur",
+        "bau"
+      ],
+      "keywords": [
+        "architektur",
+        "bau",
+        "cad",
+        "efz",
+        "zeichner",
+        "zeichner/in"
+      ]
+    },
+    {
+      "id": "zimmermann-zimmerin-efz",
+      "name": "Zimmermann/Zimmerin EFZ",
+      "degree": "EFZ",
+      "aliases": [],
+      "keywords": [
+        "efz",
+        "zimmermann/zimmerin"
+      ]
+    }
+  ]
+}
