@@ -85,6 +85,8 @@ export default async function StatsPage() {
     ["HGETALL", "stats:countries"],
     ["HGETALL", "stats:devices"],
     ["HGETALL", `stats:pages:${days[0]}`],
+    ["HGETALL", "stats:share:clicked"],
+    ["HGETALL", "stats:share:completed"],
     ...days.map((d) => ["PFCOUNT", `stats:visitors:${d}`] as Array<string | number>),
     ...days.map((d) => ["HGETALL", `stats:events:${d}`] as Array<string | number>),
   ]);
@@ -100,21 +102,17 @@ export default async function StatsPage() {
     );
   }
 
-  const [vTotal, vToday, v7, v30, evTotalRaw, profRaw, refRaw, countryRaw, deviceRaw, pagesRaw] = res as [
-    number,
-    number,
-    number,
-    number,
-    Hash,
-    Hash,
-    Hash,
-    Hash,
-    Hash,
-    Hash,
-  ];
+  const FIXED = 12;
+  const [vTotal, vToday, v7, v30, evTotalRaw, profRaw, refRaw, countryRaw, deviceRaw, pagesRaw, shareClickedRaw, shareCompletedRaw] =
+    res.slice(0, FIXED) as [number, number, number, number, Hash, Hash, Hash, Hash, Hash, Hash, Hash, Hash];
   const evTotal = toObj(evTotalRaw);
-  const dailyVisitors = res.slice(10, 10 + days.length) as number[];
-  const dailyEvents = (res.slice(10 + days.length) as Hash[]).map(toObj);
+  const dailyVisitors = res.slice(FIXED, FIXED + days.length) as number[];
+  const dailyEvents = (res.slice(FIXED + days.length) as Hash[]).map(toObj);
+  const shareClicked = toObj(shareClickedRaw);
+  const shareCompleted = toObj(shareCompletedRaw);
+  const shareRows: Array<[string, number]> = Object.keys({ ...shareClicked, ...shareCompleted })
+    .sort((a, b) => (shareClicked[b] ?? 0) - (shareClicked[a] ?? 0))
+    .map((k) => [`${k}: ${shareClicked[k] ?? 0} geklickt`, shareCompleted[k] ?? 0]);
 
   const funnel = [
     ["Startseite gesehen", evTotal.page_view ?? 0, null],
@@ -201,6 +199,7 @@ export default async function StatsPage() {
           <ListCard title="Seiten heute" rows={top(toObj(pagesRaw))} />
           <ListCard title="Länder" rows={top(toObj(countryRaw))} />
           <ListCard title="Geräte" rows={top(toObj(deviceRaw))} />
+          <ListCard title="Teilen-Buttons (geklickt → abgeschlossen)" rows={shareRows} />
           <ListCard title="Einladungen (Referral-Codes)" rows={top(toObj(refRaw))} />
           <ListCard title="Alle Events" rows={ANALYTICS_EVENTS.map((e) => [e, evTotal[e] ?? 0] as [string, number])} />
         </section>

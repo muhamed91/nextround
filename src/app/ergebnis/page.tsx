@@ -93,8 +93,8 @@ export default function ErgebnisPage() {
     router.push("/interview");
   }
 
-  async function share() {
-    const r = await shareNextRound("result");
+  async function share(source = "result") {
+    const r = await shareNextRound(source);
     if (r === "copied") setToast("Link kopiert ✓");
     if (r === "failed" && !canNativeShare) setToast("Kopieren nicht möglich");
   }
@@ -113,7 +113,7 @@ export default function ErgebnisPage() {
   }
 
   async function copy() {
-    const r = await copyShareLink();
+    const r = await copyShareLink("result_copy");
     setToast(r === "copied" ? "Link kopiert ✓" : "Kopieren nicht möglich");
   }
 
@@ -161,7 +161,7 @@ export default function ErgebnisPage() {
           <Button onClick={restart}>
             Nochmal üben <Arrow />
           </Button>
-          <Button variant="secondary" onClick={share}>
+          <Button variant="secondary" onClick={() => share("result")}>
             <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none">
               <path d="M12 3v12M7 8l5-5 5 5M5 14v5a2 2 0 002 2h10a2 2 0 002-2v-5" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -186,8 +186,8 @@ export default function ErgebnisPage() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
-                trackEvent("share_clicked", { source: "whatsapp" });
-                trackEvent("share_completed", { method: "whatsapp" });
+                trackEvent("share_clicked", { source: "result_whatsapp", method: "whatsapp" });
+                trackEvent("share_completed", { source: "result_whatsapp", method: "whatsapp" });
               }}
               className="flex min-h-14 flex-col items-center justify-center gap-1 rounded-2xl bg-[#e8f8ec] text-xs font-bold text-ink hover:bg-[#d8f2df]"
             >
@@ -204,7 +204,7 @@ export default function ErgebnisPage() {
             </button>
             <button
               type="button"
-              onClick={share}
+              onClick={() => share("result_more")}
               className="flex min-h-14 flex-col items-center justify-center gap-1 rounded-2xl bg-lilac text-xs font-bold text-ink hover:bg-[#e6dfff]"
             >
               <span aria-hidden="true" className="text-xl">⋯</span>

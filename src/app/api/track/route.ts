@@ -71,6 +71,9 @@ export async function POST(req: Request) {
       cmds.push(["HINCRBY", "stats:professions", record.props.profession, 1]);
     }
     if (event === "referral_visit" && typeof record.props.ref === "string") cmds.push(["HINCRBY", "stats:referrers", record.props.ref, 1]);
+    if ((event === "share_clicked" || event === "share_completed") && typeof record.props.source === "string") {
+      cmds.push(["HINCRBY", `stats:share:${event === "share_clicked" ? "clicked" : "completed"}`, record.props.source, 1]);
+    }
     if (record.country) cmds.push(["HINCRBY", "stats:countries", record.country, 1]);
     cmds.push(["HINCRBY", "stats:devices", record.device, 1]);
     await pipeline(cmds);

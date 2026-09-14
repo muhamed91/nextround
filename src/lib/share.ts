@@ -24,27 +24,39 @@ export function getShareUrl(): string {
 
 export const SHARE_TEXT = "Vorstellungsgespräch? Probier NextRound 👀";
 
+/**
+ * Share via the native share sheet (mobile) or copy the link (desktop).
+ * `source` says where the button lives: "landing", "landing_header", "result", "result_more", ...
+ */
 export async function shareNextRound(source: string): Promise<"shared" | "copied" | "failed"> {
-  trackEvent("share_clicked", { source });
+  trackEvent("share_clicked", { source, method: hasNativeShare() ? "native" : "copy" });
   const url = getShareUrl();
-  if (typeof navigator !== "undefined" && navigator.share) {
+  if (hasNativeShare()) {
     try {
       await navigator.share({ title: "NextRound", text: SHARE_TEXT, url });
-      trackEvent("share_completed", { method: "native" });
+      trackEvent("share_completed", { source, method: "native" });
       return "shared";
     } catch {
       return "failed"; // user cancelled
     }
   }
-  return copyShareLink();
+  return copyToClipboard(source);
 }
 
-export async function copyShareLink(): Promise<"copied" | "failed"> {
-  trackEvent("share_clicked", { source: "copy" });
-  const url = getShareUrl();
+/** Explicit "Link kopieren" button. */
+export async function copyShareLink(source = "copy"): Promise<"copied" | "failed"> {
+  trackEvent("share_clicked", { source, method: "copy" });
+  return copyToClipboard(source);
+}
+
+function hasNativeShare() {
+  return typeof navigator !== "undefined" && typeof navigator.share === "function";
+}
+
+async function copyToClipboard(source: string): Promise<"copied" | "failed"> {
   try {
-    await navigator.clipboard.writeText(`${SHARE_TEXT} ${url}`);
-    trackEvent("share_completed", { method: "copy" });
+    await navigator.clipboard.writeText(`${SHARE_TEXT} ${getShareUrl()}`);
+    trackEvent("share_completed", { source, method: "copy" });
     return "copied";
   } catch {
     return "failed";
