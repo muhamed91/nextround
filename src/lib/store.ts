@@ -4,9 +4,19 @@
  */
 type Cmd = Array<string | number>;
 
+/** Find an env var by exact name or with any prefix Vercel adds (e.g. "nextround_KV_REST_API_URL"). */
+function envVar(...names: string[]): string | undefined {
+  for (const n of names) {
+    if (process.env[n]) return process.env[n];
+    const hit = Object.keys(process.env).find((k) => k.endsWith(`_${n}`) && process.env[k]);
+    if (hit) return process.env[hit];
+  }
+  return undefined;
+}
+
 function config() {
-  const url = process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
+  const url = envVar("UPSTASH_REDIS_REST_URL", "KV_REST_API_URL");
+  const token = envVar("UPSTASH_REDIS_REST_TOKEN", "KV_REST_API_TOKEN");
   return url && token ? { url, token } : null;
 }
 
