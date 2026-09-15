@@ -24,6 +24,7 @@ export type AnalyticsEvent =
   | "share_clicked"
   | "share_completed"
   | "pdf_downloaded"
+  | "dictation_started"
   | "referral_visit";
 
 export const ANALYTICS_EVENTS: readonly AnalyticsEvent[] = [
@@ -39,6 +40,7 @@ export const ANALYTICS_EVENTS: readonly AnalyticsEvent[] = [
   "share_clicked",
   "share_completed",
   "pdf_downloaded",
+  "dictation_started",
   "referral_visit",
 ];
 

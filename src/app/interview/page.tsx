@@ -7,6 +7,7 @@ import { Shell } from "@/components/Shell";
 import { ProgressBar } from "@/components/ProgressBar";
 import { Arrow, Button } from "@/components/Button";
 import { Bulb, Sparkles, Star } from "@/components/Doodles";
+import { DictateButton, useDictation } from "@/components/DictateButton";
 import { trackEvent } from "@/lib/analytics";
 import { loadSession, saveSession } from "@/lib/session";
 import { answerHeadline } from "@/lib/score";
@@ -22,6 +23,12 @@ export default function InterviewPage() {
   const [feedback, setFeedback] = useState<Evaluation | null>(null);
   const [loadingMsg, setLoadingMsg] = useState("Ich checke deine Antwort ... 👀");
   const startedRef = useRef(false);
+  const applyDictation = useCallback(
+    (updater: (current: string) => string) => setAnswer((cur) => updater(cur).slice(0, MAX_ANSWER_LENGTH)),
+    [],
+  );
+  const dictation = useDictation({ onText: applyDictation, disabled: phase !== "question" });
+  const stopDictation = dictation.stop; // stable (useCallback with no deps)
 
   // Load or generate the interview
   useEffect(() => {
@@ -83,6 +90,7 @@ export default function InterviewPage() {
   const submit = useCallback(async () => {
     if (!session) return;
     const q = session.questions[session.currentIndex];
+    stopDictation();
     const text = answer.trim();
     if (!text) return;
     setLoadingMsg("Ich checke deine Antwort ... 👀");
@@ -105,7 +113,7 @@ export default function InterviewPage() {
     } catch {
       setPhase("error");
     }
-  }, [answer, session]);
+  }, [answer, session, stopDictation]);
 
   function nextQuestion() {
     if (!session) return;
@@ -236,17 +244,22 @@ export default function InterviewPage() {
               <textarea
                 value={answer}
                 onChange={(e) => setAnswer(e.target.value.slice(0, MAX_ANSWER_LENGTH))}
-                placeholder="Deine Antwort ..."
+                placeholder={dictation.listening ? "Ich höre zu ... sprich einfach los." : "Deine Antwort ... oder tippe aufs Mikrofon und sprich."}
                 rows={6}
                 maxLength={MAX_ANSWER_LENGTH}
                 disabled={checking}
-                className="min-h-44 w-full resize-y rounded-2xl bg-transparent px-4 py-4 text-base leading-relaxed outline-none placeholder:text-muted disabled:opacity-60"
+                className="min-h-44 w-full resize-y rounded-2xl bg-transparent px-4 py-4 pb-14 text-base leading-relaxed outline-none placeholder:text-muted disabled:opacity-60"
               />
+              <div className="absolute bottom-3 left-3 flex items-center gap-3">
+                {dictation.supported ? <DictateButton listening={dictation.listening} onClick={dictation.toggle} disabled={checking} /> : null}
+                {dictation.listening ? <span className="text-xs font-bold text-purple">Aufnahme läuft</span> : null}
+              </div>
               <span className="pointer-events-none absolute bottom-3 right-4 text-xs font-semibold text-muted tabular-nums">
                 {answer.length} / {MAX_ANSWER_LENGTH}
               </span>
             </div>
           </label>
+          {dictation.error ? <p className="mt-2 text-sm font-semibold text-warn">{dictation.error}</p> : null}
 
           <div className="mt-5">
             {checking ? (
